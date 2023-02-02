@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ButtonHTMLAttributes, DetailedHTMLProps, MouseEvent, MouseEventHandler, ReactNode } from "react"
 
 export interface LoadProps {
   status: boolean,
@@ -15,20 +15,16 @@ export interface DefaultProps {
   themeColor: boolean
 }
 
-export interface BtnInterface {
+export interface BtnInterface extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   children: ReactNode,
   themeColor: boolean,
   active: boolean,
-  onClick?: void | null,
   margin?: string | null,
-  padding?: string | null,
   border?: string | null,
-  borderRadius?: string | null,
   fontSize?: string | null,
   fontWeight?: number | null,
   width?: string | null,
   height?: string | null,
-  display?: string | null
 }
 
 export interface ThemeState {
