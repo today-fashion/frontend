@@ -14,6 +14,7 @@ export interface DefaultProps {
 }
 
 export interface StyleProps {
+  themeColor: boolean,
   margin: string | undefined,
   padding: string | undefined,
   border: string | undefined,
