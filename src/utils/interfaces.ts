@@ -16,15 +16,15 @@ export interface DefaultProps {
 export interface BtnStyleProps {
   themeColor: boolean,
   active: boolean,
-  margin: string | undefined,
-  padding: string | undefined,
-  border: string | undefined,
-  borderRadius: string | undefined,
-  fontSize: string | undefined,
-  fontWeight: number | undefined,
-  width: string | undefined,
-  height: string | undefined,
-  display: string | undefined
+  margin?: string | null,
+  padding?: string | null,
+  border?: string | null,
+  borderRadius?: string | null,
+  fontSize?: string | null,
+  fontWeight?: number | null,
+  width?: string | null,
+  height?: string | null,
+  display?: string | null
 }
 
 export interface ThemeState {
