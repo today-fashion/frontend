@@ -13,8 +13,9 @@ export interface DefaultProps {
   themeColor: boolean
 }
 
-export interface StyleProps {
+export interface BtnStyleProps {
   themeColor: boolean,
+  active: boolean,
   margin: string | undefined,
   padding: string | undefined,
   border: string | undefined,
