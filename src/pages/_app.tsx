@@ -21,11 +21,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <>
         <GlobalStyle />
         <Head />
-        <Loading status={error ? false : !data ? true : false} themeColor={event.theme ? true : false} />
-        {!error && data ?
-          <Component {...pageProps} /> 
+        <Loading status={error ? false : !data ? true : false} themeColor={event.theme} />
+        {!error && data && data.body.success ?
+          <Component {...pageProps} themeColor={event.theme} /> 
         :
-          <ServerError title='서버가 응답하지 않습니다.' desc='인터넷 상태를 확인해주세요!' />
+          <ServerError title='서버가 응답하지 않습니다.' desc='인터넷 상태를 확인해주세요!' themeColor={event.theme} />
         } 
       </>
     </ThemeProvider>
