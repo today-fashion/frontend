@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 
-export const Button = styled.button `
+export const ThemeButton = styled.button `
   margin: ${({ margin }: BtnStyleProps) => margin ? margin : "0"};
   padding: ${({ padding }: BtnStyleProps) => padding ? padding : "0"};
   background-color: ${({ themeColor, active }: BtnStyleProps) => active ? activeBtn.bgColor : themeColor ? defaultBtn.lightBgColor : defaultBtn.darkBgColor};
@@ -40,4 +40,5 @@ export const Button = styled.button `
   width: ${({ width }: BtnStyleProps) => width ? width : "auto"};
   height: ${({ height }: BtnStyleProps) => height ? height : "auto"};
   display: ${({ display }: BtnStyleProps) => display ? display : "block"};
+  {...any-button style};
 `
