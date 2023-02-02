@@ -8,16 +8,20 @@ import useSWR from 'swr';
 
 import { lightTheme, darkTheme } from '@/styles/theme';
 import { GlobalStyle } from '@/styles/globals';
+import { useReducer } from 'react';
+import { themeReducer } from '@/modules/themeReducer';
 
 export default function App({ Component, pageProps }: AppProps) {
+
+  const [event, updateEvent] = useReducer(themeReducer, { theme: false })
   const { data, error } = useSWR('/api/userCheck', fetcher)
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={event.theme ? lightTheme : darkTheme}>
       <>
         <GlobalStyle />
         <Head />
-        <Loading status={error ? false : !data ? true : false} />
+        <Loading status={error ? false : !data ? true : false} themeColor={event.theme ? true : false} />
         {!error && data ?
           <Component {...pageProps} /> 
         :
