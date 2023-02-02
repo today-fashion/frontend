@@ -5,7 +5,24 @@ export interface LoadProps {
 
 export interface ErrorProps {
   title: string,
-  desc: string
+  desc: string,
+  themeColor: boolean
+}
+
+export interface DefaultProps {
+  themeColor: boolean
+}
+
+export interface StyleProps {
+  margin: string | undefined,
+  padding: string | undefined,
+  border: string | undefined,
+  borderRadius: string | undefined,
+  fontSize: string | undefined,
+  fontWeight: number | undefined,
+  width: string | undefined,
+  height: string | undefined,
+  display: string | undefined
 }
 
 export interface ThemeState {
