@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export interface LoadProps {
   status: boolean,
   themeColor: boolean
@@ -13,9 +15,11 @@ export interface DefaultProps {
   themeColor: boolean
 }
 
-export interface BtnStyleProps {
+export interface BtnInterface {
+  children: ReactNode,
   themeColor: boolean,
   active: boolean,
+  onClick?: void | null,
   margin?: string | null,
   padding?: string | null,
   border?: string | null,
