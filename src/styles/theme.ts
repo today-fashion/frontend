@@ -6,6 +6,18 @@ export const lightTheme = {
   btnFontColor: "#fff"
 }
 
+export const activeBtn = {
+  bgColor: "#0e2ee2",
+  fontColor: "#fff"
+}
+
+export const defaultBtn = {
+  lightBgColor: "#000",
+  lightFontColor: "#fff",
+  darkBgColor: "#fff",
+  darkFontColor: "#000"
+}
+
 export const darkTheme = {
   bgColor: "#242424",
   fontColor: "#fff",
