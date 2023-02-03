@@ -4,11 +4,12 @@ import styled from "styled-components"
 
 export function ThemeChanger (props: ThemeChangerProps): JSX.Element {
   return (
-    <Button style={{
-      backgroundColor: props.themeColor ? theme.lightTheme.bgColor : theme.darkTheme.bgColor,
-      border: props.themeColor ? theme.lightTheme.borderColor : theme.darkTheme.borderColor,
-      color: props.themeColor ? theme.lightTheme.fontColor : theme.darkTheme.fontColor
-    }}
+    <Button 
+      style={{
+        backgroundColor: props.themeColor ? theme.lightTheme.bgColor : theme.darkTheme.bgColor,
+        border: props.themeColor ? theme.lightTheme.borderColor : theme.darkTheme.borderColor,
+        color: props.themeColor ? theme.lightTheme.fontColor : theme.darkTheme.fontColor
+      }}
       onClick={props.onClick}
     >
       {props.themeColor ?
