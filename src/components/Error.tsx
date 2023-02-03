@@ -15,27 +15,24 @@ export const ServerError = ({ title, desc, themeColor }: ErrorProps): JSX.Elemen
           <ThemeButton 
             themeColor={themeColor} 
             active={false}
-            margin="0 4px"
             fontSize={"18px"}
             fontWeight={600}
             width={"212px"}
             height={"54px"}
-            display={"flex"}
-            borderRadius={"4px"}
+            onClick={() => router.back()}
           >
             이전 페이지
           </ThemeButton>
 
+          
           <ThemeButton 
             themeColor={themeColor} 
             active={true}
-            margin="0 4px"
             fontSize={"18px"}
             fontWeight={600}
             width={"212px"}
             height={"54px"}
-            display={"flex"}
-            borderRadius={"4px"}
+            onClick={() => router.push("/")}
           >
             메인 페이지
           </ThemeButton>
