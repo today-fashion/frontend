@@ -16,12 +16,14 @@ export const Loading = ({ status, themeColor }: LoadProps): JSX.Element => {
 
 const LoadingPage = styled.div `
   position: absolute;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
   z-index: 99999;
   background-color: ${(props: LoadProps) => (props.themeColor ? "#fff" : "#242424")};
   color: ${(props: LoadProps) => (props.themeColor ? "#242424" : "#fff")};
-  animation ${(props: LoadProps) => (props.status ? fadeIn : fadeOut)} .75s forwards;
+  animation ${(props: LoadProps) => (props.status ? fadeIn : fadeOut)} .35s forwards;
 `
 
 const TodayFashion = styled.h1 `
