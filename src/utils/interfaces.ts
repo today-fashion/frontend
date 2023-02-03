@@ -11,7 +11,7 @@ export interface ErrorProps {
   themeColor: boolean
 }
 
-export interface DefaultProps {
+export interface Props404 {
   themeColor: boolean
 }
 
@@ -19,11 +19,6 @@ export interface BtnInterface extends DetailedHTMLProps<ButtonHTMLAttributes<HTM
   children: ReactNode,
   themeColor: boolean,
   active: boolean,
-  margin?: string | null,
-  fontSize?: string | null,
-  fontWeight?: number | null,
-  width?: string | null,
-  height?: string | null,
 }
 
 export interface ThemeChangerProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
