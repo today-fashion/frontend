@@ -1,18 +1,15 @@
-import { activeBtn, darkTheme, defaultBtn, lightTheme } from "@/styles/theme";
+import { theme } from "@/styles/theme";
 import { BtnInterface } from "@/utils/interfaces";
 import styled from "styled-components";
 
 export function ThemeButton(props: BtnInterface): JSX.Element {
   return (
-    <Button style={{ 
-      margin: props.margin ? props.margin : "0",
-      backgroundColor: props.active ? activeBtn.bgColor : (props.themeColor ? defaultBtn.lightBgColor : defaultBtn.darkBgColor),
-      color: props.active ? activeBtn.fontColor : (props.themeColor ? defaultBtn.lightFontColor : defaultBtn.darkFontColor),
-      fontSize: props.fontSize ? props.fontSize : "auto",
-      fontWeight: props.fontWeight ? props.fontWeight : "auto",
-      width: props.width ? props.width : "auto",
-      height: props.height ? props.height : "auto"
-    }}
+    <Button
+      style={{
+        backgroundColor: props.active ? theme.button.activeBtn.bgColor : (props.themeColor ? theme.button.defaultBtn.lightBgColor : theme.button.defaultBtn.darkBgColor),
+        color: props.active ? theme.button.activeBtn.fontColor : (props.themeColor ? theme.button.defaultBtn.lightFontColor : theme.button.defaultBtn.darkFontColor),
+        ...props.style
+      }}
       onClick={props.onClick}
     >
       {props.children}
