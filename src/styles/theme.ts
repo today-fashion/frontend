@@ -1,4 +1,4 @@
-export const lightTheme = {
+const lightTheme = {
   bgColor: "#fff",
   fontColor: "#242424",
   borderColor: "1px solid #2c2d33",
@@ -6,19 +6,19 @@ export const lightTheme = {
   btnFontColor: "#fff"
 }
 
-export const activeBtn = {
+const activeBtn = {
   bgColor: "#0e2ee2",
   fontColor: "#fff"
 }
 
-export const defaultBtn = {
+const defaultBtn = {
   lightBgColor: "#000",
   lightFontColor: "#fff",
   darkBgColor: "#fff",
   darkFontColor: "#000"
 }
 
-export const darkTheme = {
+const darkTheme = {
   bgColor: "#242424",
   fontColor: "#fff",
   borderColor: "1px solid #eaeaea",
@@ -28,7 +28,11 @@ export const darkTheme = {
 
 export const theme = {
   lightTheme,
-  darkTheme
+  darkTheme,
+  button: {
+    activeBtn,
+    defaultBtn
+  }
 }
 
 export interface ThemeType {
