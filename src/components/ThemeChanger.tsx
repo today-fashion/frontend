@@ -1,13 +1,13 @@
-import { darkTheme, lightTheme } from "@/styles/theme"
+import { theme } from "@/styles/theme"
 import { ThemeChangerProps } from "@/utils/interfaces"
 import styled from "styled-components"
 
 export function ThemeChanger (props: ThemeChangerProps): JSX.Element {
   return (
     <Button style={{
-      backgroundColor: props.themeColor ? lightTheme.bgColor : darkTheme.bgColor,
-      border: props.themeColor ? lightTheme.borderColor : darkTheme.borderColor,
-      color: props.themeColor ? lightTheme.fontColor : darkTheme.fontColor
+      backgroundColor: props.themeColor ? theme.lightTheme.bgColor : theme.darkTheme.bgColor,
+      border: props.themeColor ? theme.lightTheme.borderColor : theme.darkTheme.borderColor,
+      color: props.themeColor ? theme.lightTheme.fontColor : theme.darkTheme.fontColor
     }}
       onClick={props.onClick}
     >
