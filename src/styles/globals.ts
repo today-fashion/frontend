@@ -22,8 +22,17 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  body {
+  html {
+    color-scheme: light;
     background-color: ${({ theme }: ThemeType) => theme.bgColor};
     color: ${({ theme }: ThemeType) => theme.fontColor}
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body: {
+      color-scheme: dark;
+      background-color: #242424;
+      color: #fff;
+    }
   }
 `
