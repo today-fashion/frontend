@@ -20,11 +20,14 @@ export interface BtnInterface extends DetailedHTMLProps<ButtonHTMLAttributes<HTM
   themeColor: boolean,
   active: boolean,
   margin?: string | null,
-  border?: string | null,
   fontSize?: string | null,
   fontWeight?: number | null,
   width?: string | null,
   height?: string | null,
+}
+
+export interface ThemeChangerProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+  themeColor: boolean,
 }
 
 export interface ThemeState {
