@@ -1,7 +1,7 @@
 export const lightTheme = {
   bgColor: "#fff",
   fontColor: "#242424",
-  borderColor: "1px solid #eaeaea",
+  borderColor: "1px solid #2c2d33",
   btnColor: "#0e2ee2",
   btnFontColor: "#fff"
 }
@@ -21,7 +21,7 @@ export const defaultBtn = {
 export const darkTheme = {
   bgColor: "#242424",
   fontColor: "#fff",
-  borderColor: "1px solid #2c2d33",
+  borderColor: "1px solid #eaeaea",
   btnColor: "#0e2ee2",
   btnFontColor: "#fff"
 }
