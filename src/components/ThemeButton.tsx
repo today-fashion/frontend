@@ -8,7 +8,6 @@ export function ThemeButton(props: BtnInterface): JSX.Element {
       margin: props.margin ? props.margin : "0",
       backgroundColor: props.active ? activeBtn.bgColor : (props.themeColor ? defaultBtn.lightBgColor : defaultBtn.darkBgColor),
       color: props.active ? activeBtn.fontColor : (props.themeColor ? defaultBtn.lightFontColor : defaultBtn.darkFontColor),
-      border: props.border ? props.border : (props.themeColor ? lightTheme.borderColor : darkTheme.borderColor),
       fontSize: props.fontSize ? props.fontSize : "auto",
       fontWeight: props.fontWeight ? props.fontWeight : "auto",
       width: props.width ? props.width : "auto",
@@ -23,10 +22,12 @@ export function ThemeButton(props: BtnInterface): JSX.Element {
 
 const Button = styled.button `
   padding: 0;
+  border: 0;
   cursor: pointer;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-radius: 4px;
   display: flex;
+  transition: all .35s;
 `
