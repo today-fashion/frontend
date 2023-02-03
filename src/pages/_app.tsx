@@ -6,18 +6,28 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import useSWR from 'swr';
 
-import { lightTheme, darkTheme } from '@/styles/theme';
+import { theme } from '@/styles/theme';
 import { GlobalStyle } from '@/styles/globals';
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { themeReducer } from '@/modules/themeReducer';
 import { ThemeChanger } from '@/components/ThemeChanger';
+import { getCookie } from '@/utils/cookies';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [event, updateEvent] = useReducer(themeReducer, { theme: false })
+  useEffect(() => {
+    const prefers = window.matchMedia('(prefers-color-scheme: Light)').matches
+    const Theme = getCookie("Theme")
+    if (!Theme || (Theme !== "Light" && Theme !== "Dark")) updateEvent({ type: (prefers ? "Light" : "Dark")})
+    else {
+      if (Theme === "Light") updateEvent({ type: "Light" })
+      else updateEvent({ type: "Dark" })
+    }
+  }, [])
   const { data, error } = useSWR('/api/userCheck', fetcher)
 
   return (
-    <ThemeProvider theme={event.theme ? lightTheme : darkTheme}>
+    <ThemeProvider theme={event.theme ? theme.lightTheme : theme.darkTheme}>
       <>
         <GlobalStyle />
         <Head />
