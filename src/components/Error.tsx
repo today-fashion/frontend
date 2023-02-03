@@ -22,10 +22,8 @@ export const ServerError = ({ title, desc, themeColor }: ErrorProps): JSX.Elemen
             onClick={() => router.back()}
           >
             이전 페이지
-          </ThemeButton>
-
-          
-          <ThemeButton 
+          </ThemeButton>          
+          <ThemeButton
             themeColor={themeColor} 
             active={true}
             fontSize={"18px"}
@@ -37,10 +35,29 @@ export const ServerError = ({ title, desc, themeColor }: ErrorProps): JSX.Elemen
             메인 페이지
           </ThemeButton>
         </ErrorBtns>
-        <ErrorBtnsMobile>
-
-        </ErrorBtnsMobile>
       </Error>
+      <ErrorBtnsMobile>
+        <ThemeButton
+          themeColor={themeColor}
+          active={false}
+          fontSize={"16px"}
+          fontWeight={600}
+          width={"100%"}
+          height={"56px"}
+        >
+          이전 페이지
+        </ThemeButton>
+        <ThemeButton
+          themeColor={themeColor}
+          active={true}
+          fontSize={"16px"}
+          fontWeight={600}
+          width={"100%"}
+          height={"56px"}
+        >
+          메인 페이지
+        </ThemeButton>
+      </ErrorBtnsMobile>
     </ErrorPage>
   )
 }
@@ -85,5 +102,11 @@ const ErrorBtns = styled.div `
 `
 
 const ErrorBtnsMobile = styled.div `
-
+  display: none;
+  @media screen and (max-width: 480px) {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;  
+  }
 `
