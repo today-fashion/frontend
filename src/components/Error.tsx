@@ -14,6 +14,7 @@ export const ServerError = ({ title, desc, themeColor }: ErrorProps): JSX.Elemen
         <ErrorBtns>
           <ThemeButton 
             themeColor={themeColor} 
+            margin={"0 4px"}
             active={false}
             fontSize={"18px"}
             fontWeight={600}
@@ -25,6 +26,7 @@ export const ServerError = ({ title, desc, themeColor }: ErrorProps): JSX.Elemen
           </ThemeButton>          
           <ThemeButton
             themeColor={themeColor} 
+            margin={"0 4px"}
             active={true}
             fontSize={"18px"}
             fontWeight={600}
