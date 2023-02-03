@@ -14,24 +14,28 @@ export const ServerError = ({ title, desc, themeColor }: ErrorProps): JSX.Elemen
         <ErrorBtns>
           <ThemeButton 
             themeColor={themeColor} 
-            margin={"0 4px"}
             active={false}
-            fontSize={"18px"}
-            fontWeight={600}
-            width={"212px"}
-            height={"54px"}
+            style={{
+              margin: "0 4px",
+              fontSize: "18px",
+              fontWeight: 600,
+              width: "212px",
+              height: "54px"
+            }}
             onClick={() => router.back()}
           >
             이전 페이지
           </ThemeButton>          
           <ThemeButton
             themeColor={themeColor} 
-            margin={"0 4px"}
             active={true}
-            fontSize={"18px"}
-            fontWeight={600}
-            width={"212px"}
-            height={"54px"}
+            style={{
+              margin: "0 4px",
+              fontSize: "18px",
+              fontWeight: 600,
+              width: "212px",
+              height: "54px"
+            }}
             onClick={() => router.push("/")}
           >
             메인 페이지
@@ -42,20 +46,24 @@ export const ServerError = ({ title, desc, themeColor }: ErrorProps): JSX.Elemen
         <ThemeButton
           themeColor={themeColor}
           active={false}
-          fontSize={"16px"}
-          fontWeight={600}
-          width={"100%"}
-          height={"56px"}
+          style={{
+            fontSize: "16px",
+            fontWeight: 600,
+            width: "100%",
+            height: "56px"
+          }}
         >
           이전 페이지
         </ThemeButton>
         <ThemeButton
           themeColor={themeColor}
           active={true}
-          fontSize={"16px"}
-          fontWeight={600}
-          width={"100%"}
-          height={"56px"}
+          style={{
+            fontSize: "16px",
+            fontWeight: 600,
+            width: "100%",
+            height: "56px"
+          }}
         >
           메인 페이지
         </ThemeButton>
