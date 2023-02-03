@@ -5,11 +5,11 @@ import styled from 'styled-components';
 export const Loading = ({ status, themeColor }: LoadProps): JSX.Element => {
   return (
     <LoadingPage status={status} themeColor={themeColor}>
-        <TodayFashion>
-          <i>
-            Today-Fasion
-          </i>
-        </TodayFashion>
+      <TodayFashion>
+        <i>
+          Today-Fasion
+        </i>
+      </TodayFashion>
     </LoadingPage>
   )
 }
