@@ -10,9 +10,9 @@ import { lightTheme, darkTheme } from '@/styles/theme';
 import { GlobalStyle } from '@/styles/globals';
 import { useReducer } from 'react';
 import { themeReducer } from '@/modules/themeReducer';
+import { ThemeChanger } from '@/components/ThemeChanger';
 
 export default function App({ Component, pageProps }: AppProps) {
-
   const [event, updateEvent] = useReducer(themeReducer, { theme: false })
   const { data, error } = useSWR('/api/userCheck', fetcher)
 
@@ -21,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <>
         <GlobalStyle />
         <Head />
+        <ThemeChanger themeColor={event.theme} onClick={() => updateEvent({ type: "diff" })} />
         <Loading status={error ? false : !data ? true : false} themeColor={event.theme} />
         {!error && data && data.body.success ?
           <Component {...pageProps} themeColor={event.theme} /> 
